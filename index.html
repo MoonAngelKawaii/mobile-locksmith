@@ -1,192 +1,271 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Locksmith Lock & Key NC LLC | Charlotte's Premium Locksmith</title>
-    <link rel="stylesheet" href="style.css">
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Locksmith Lock & Key NC LLC | North Carolina Professional Locksmith</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Multi-Page Responsive Stylesheet - KeyMe Corporate Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
-    <!-- Premium Navigation Bar with Multi-Page Menu Links -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">🔑</span> 
-                <span class="logo-text">MOBILE LOCKSMITH</span>
-                <span class="logo-subtext">LOCK & KEY NC LLC</span>
-            </div>
-            <!-- Multi-Page Menu Setup -->
-            <div class="nav-menu">
-                <a href="index.html" class="menu-link active">Home</a>
-                <a href="services.html" class="menu-link">Services</a>
-                <a href="about.html" class="menu-link">About Us</a>
-                <a href="contact.html" class="menu-link">Customer Support</a>
-            </div>
-            <div class="nav-right">
-                <span class="license-badge">NC Licensed Locksmith</span>
-                <a href="tel:7045550199" class="desktop-nav-call">📞 Call Dispatch</a>
-            </div>
-        </div>
-    </nav>
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.5;
+}
 
-    <!-- Tech-Forward Hero Section (No strict timing or fixed prices) -->
-    <header class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Professional Locksmith Solutions Across North Carolina</h1>
-                <p>Trusted mobile specialists offering on-site service for advanced automotive, residential, and commercial lock security. Fast dispatch to your location.</p>
-                <div class="hero-cta-group">
-                    <a href="tel:7045550199" class="main-cta-btn">🚨 REQUEST ON-SITE LOCKSMITH DISPATCH</a>
-                    <div class="pricing-badge">Licensed • Fully Insured • Bonded</div>
-                </div>
-            </div>
-        </div>
-    </header>
+/* Premium Navbar Layout */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #f1f5f9;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 20px;
+}
 
-    <!-- Trust Features (Removed 20-min and $95 labels) -->
-    <section class="value-strip">
-        <div class="strip-container">
-            <div class="value-item">⚡ Prompt Mobile Dispatch</div>
-            <div class="value-item">🛡️ On-Site Assessment & Upfront Quotes</div>
-            <div class="value-item">⭐ Highly Rated Professional Service</div>
-        </div>
-    </section>
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-    <!-- Main Service Overview -->
-    <section class="services-section">
-        <div class="section-container">
-            <h2 class="section-title">Our Professional Solutions</h2>
-            <p class="section-subtitle">Premium locksmith technology brought directly to your location. Every lock type is inspected on-site to guarantee a precise, accurate quote.</p>
-            
-            <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="card-icon">🚗</div>
-                    <h3>Automotive Lockout & Key Entry</h3>
-                    <p>Professional vehicle entry, trunk unlocking, and key extraction. Safe, damage-free methods tailored to your specific vehicle security system.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="card-icon">🏠</div>
-                    <h3>Residential Lock Services</h3>
-                    <p>Emergency home lockouts, complete house rekeying, master key setups, and secure hardware upgrades following a detailed lock evaluation.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="card-icon">🏢</div>
-                    <h3>Commercial Security</h3>
-                    <p>Business lockout assistance, heavy-duty deadbolt installation, storefront security evaluations, and master key planning for offices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo {
+    display: flex;
+    flex-direction: column;
+}
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <p class="footer-brand">Mobile Locksmith Lock & Key NC LLC</p>
-            <p class="footer-compliance">All advertising and services comply fully with NC Locksmith Licensing Board standards.</p>
-            <p class="footer-copy">&copy; 2026 Mobile Locksmith Lock & Key NC LLC. All Rights Reserved.</p>
-        </div>
-    </footer>
+.logo-text {
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    line-height: 1;
+}
 
-</body>
-</html>
+.logo-subtext {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 1px;
+}
 
-<body>
+/* Multi-Page Navigation Menu Link Styling */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
 
-    <!-- Premium Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">🔑</span> 
-                <span class="logo-text">MOBILE LOCKSMITH</span>
-                <span class="logo-subtext">LOCK & KEY NC LLC</span>
-            </div>
-            <div class="nav-right">
-                <span class="license-badge">NC Licensed Locksmith</span>
-                <a href="tel:7045550199" class="desktop-nav-call">📞 (704) 555-0199</a>
-            </div>
-        </div>
-    </nav>
+.menu-link {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
 
-    <!-- Tech-Forward Hero Section -->
-    <header class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Smart, Fast & Professional Locksmith Services</h1>
-                <p>Charlotte's trusted mobile specialist for advanced automotive, residential, and commercial lock solutions. On-site help in 20 minutes or less.</p>
-                <div class="hero-cta-group">
-                    <a href="tel:7045550199" class="main-cta-btn">🚨 EMERGENCY LOCKOUT ASSISTANCE</a>
-                    <div class="pricing-badge">Rates Start At Just $95</div>
-                </div>
-            </div>
-        </div>
-    </header>
+.menu-link:hover, .menu-link.active {
+    color: #f59e0b;
+}
 
-    <!-- KeyMe-Inspired Grid Features -->
-    <section class="value-strip">
-        <div class="strip-container">
-            <div class="value-item">⚡ 20-Min Arrival Guarantee</div>
-            <div class="value-item">🛡️ Fully Insured & Bonded</div>
-            <div class="value-item">⭐ 5-Star Rated Service</div>
-        </div>
-    </section>
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
-    <!-- Main Service Grid (Scales perfectly on Desktop vs. Phone) -->
-    <section class="services-section">
-        <div class="section-container">
-            <h2 class="section-title">Our Professional Solutions</h2>
-            <p class="section-subtitle">Premium locksmith tech brought directly to your location, anywhere in the Charlotte metro area.</p>
-            
-            <div class="services-grid">
-                <!-- Card 1 -->
-                <div class="service-card">
-                    <div class="card-icon">🚗</div>
-                    <h3>Automotive Lockout</h3>
-                    <p>Advanced vehicle entry, key extraction, and roadside trunk unlocking. 100% damage-free methods for all makes and models.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="service-card">
-                    <div class="card-icon">🏠</div>
-                    <h3>Residential Services</h3>
-                    <p>Emergency home lockouts, complete house rekeying, master key creation, and high-security smart lock installations.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="service-card">
-                    <div class="card-icon">🏢</div>
-                    <h3>Commercial Care</h3>
-                    <p>Business entry solutions, heavy-duty deadbolt installation, storefront security assessments, and panic bar repairs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.license-badge {
+    background-color: #e2e8f0;
+    color: #334155;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
 
-    <!-- Local Review Highlight -->
-    <section class="testimonial-section">
-        <div class="testimonial-container">
-            <div class="quote-mark">“</div>
-            <p class="quote-text">Locked my keys in my car at South End at midnight. Mobile Locksmith arrived in 15 minutes flat and handled it professionally. Absolute lifesavers!</p>
-            <p class="quote-author">- Marcus V., Charlotte NC</p>
-        </div>
-    </section>
+.desktop-nav-call {
+    background-color: #0f172a;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <p class="footer-brand">Mobile Locksmith Lock & Key NC LLC</p>
-            <p class="footer-compliance">All advertising and services comply fully with NC Locksmith Licensing Board standards.</p>
-            <p class="footer-copy">&copy; 2026 Mobile Locksmith Lock & Key NC LLC. All Rights Reserved.</p>
-        </div>
-    </footer>
+/* Tech Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-</body>
-</html>
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-cta-btn {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    background-color: #f59e0b; 
+    color: #0f172a;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
+    animation: pulse 2.5s infinite;
+}
+
+.pricing-badge {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+/* Value Strip Features */
+.value-strip {
+    background-color: #f1f5f9;
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.strip-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-weight: 700;
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* Services Grid Layout */
+.services-section {
+    padding: 60px 20px;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* Footer Section */
+.main-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-brand {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer-compliance {
+    font-size: 0.75rem;
+    max-width: 500px;
+    margin: 0 auto 15px auto;
+    opacity: 0.7;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+}
+
+/* Computer Scaling Rules */
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-content h1 {
+        font-size: 3.4rem;
+    }
+    .hero-section {
+        padding: 100px 20px;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
