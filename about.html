@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational Coverage | Mobile Locksmith Lock & Key LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corporate Global Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">MOBILE LOCKSMITH</span>
+                <span class="logo-subtext">LOCK & KEY LLC</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Overview</a>
+                <a href="services.html" class="nav-item">Solutions</a>
+                <a href="about.html" class="nav-item active">Coverage</a>
+                <a href="contact.html" class="nav-item">Support</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header Sub-Hero -->
+    <header class="hero-block" style="padding: 50px 24px; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+        <div class="hero-container">
+            <div class="hero-main-text">
+                <h1>Operational Coverage & Capabilities</h1>
+                <p>Bringing a full-scale commercial lock workshop directly to your physical coordinates. We eliminate the stress of towing or traditional storefront visits by running highly optimized mobile fleet units.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Philosophy Matrix Grid -->
+    <section class="value-matrix" style="padding-top: 40px; padding-bottom: 20px;">
+        <div class="matrix-container">
+            
+            <!-- Grid Card 1 -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h3>The Mobile Advantage</h3>
+                <p>Our rapid-response vans are engineered to hold industrial cutting tools, computerized transponder decoders, and a deep supply of premium residential and commercial locking hardware. We solve complex problems in a single visit.</p>
+            </div>
+
+            <!-- Grid Card 2 -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h3>Strict Identity Verification</h3>
+                <p>To preserve local community safety and follow industry compliance standards, our technicians complete rigorous on-site verification checks. We always confirm legal ownership or authorized tenancy before unlocking properties or vehicles.</p>
+            </div>
+
+            <!-- Grid Card 3 -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h3>Years of Field Experience</h3>
+                <p>Backed by extensive technical experience in mechanical and digital security frameworks. We understand everything from traditional brass deadbolts to modern standalone smart electronic entry pads.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive On-Site Dispatch Card -->
+    <section class="value-matrix" style="padding-top: 0px;">
+        <div class="matrix-container" style="grid-template-columns: 1fr;">
+            <div class="matrix-card" style="background: #f1f5f9; text-align: center; border-style: solid; border-color: #e2e8f0; padding: 40px 30px;">
+                <h2 style="color: #0f172a; margin-bottom: 12px; font-weight: 800;">Dynamic Dispatch Radius</h2>
+                <p style="max-width: 750px; margin: 0 auto 20px auto; color: #475569; font-size: 1rem;">
+                    Instead of maintaining a stationary shop, our mobile technicians patrol high-demand zones continuously. This operational framework ensures that our field units remain highly responsive and adaptive. We align our real-time driving boundaries precisely with the localized targeting set in our advertising dispatch profiles.
+                </p>
+                <button class="btn-primary" onclick="openModal()">Check Field Availability</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Pop-Up Modal Component -->
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Request Service Dispatch</h2>
+                <button class="close-modal-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>For immediate field response and structural locking evaluations, please connect directly to our emergency dispatch desk:</p>
+                <a href="tel:7045550199" class="modal-phone-btn">📞 Connect to Live Operator Now</a>
+                <p class="modal-footer-note">Technicians verify physical identification on-site before initiating residential or vehicle entries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer Block -->
+    <footer class="footer-block">
+        <div class="footer-container">
+            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
+            <p class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with regional trade regulations.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Pop-Up Script Logic -->
+    <script>
+        function openModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            let modal = document.getElementById('quoteModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
