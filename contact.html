@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | Mobile Locksmith Lock & Key LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corporate Global Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">MOBILE LOCKSMITH</span>
+                <span class="logo-subtext">LOCK & KEY LLC</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Overview</a>
+                <a href="services.html" class="nav-item">Solutions</a>
+                <a href="about.html" class="nav-item">Coverage</a>
+                <a href="contact.html" class="nav-item active">Support</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header Sub-Hero -->
+    <header class="hero-block" style="padding: 50px 24px; background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+        <div class="hero-container">
+            <div class="hero-main-text">
+                <h1>Customer Support Center</h1>
+                <p>Connect with our field operations team. Whether you need immediate emergency dispatch or want to request a callback for a scheduled commercial project, our operations desk is standing by.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Support Split Layout (Information vs Form) -->
+    <section class="services-section" style="padding-top: 40px;">
+        <div class="section-container">
+            <div class="services-grid" style="grid-template-columns: 1fr;">
+                
+                <!-- Direct Dispatch Card -->
+                <div class="service-card" style="text-align: center; border-color: #2563eb; background: #fff;">
+                    <div class="card-icon">🚨</div>
+                    <h3>Immediate Field Assistance</h3>
+                    <p style="margin-bottom: 20px;">For vehicle lockouts, lost keys, or urgent residential building security recovery, utilize our direct routing line.</p>
+                    <a href="tel:7045550199" class="main-cta-btn" style="margin: 0 auto; display: inline-block;">📞 ROUTE TO EMERGENCY OPERATOR</a>
+                </div>
+
+                <!-- Non-Emergency Callback Card -->
+                <div class="service-card">
+                    <div class="card-icon">✉️</div>
+                    <h3>Request an On-Site Evaluation</h3>
+                    <p style="margin-bottom: 20px;">Planning a future lock change, building rekey, or smart hardware upgrade? Send a message to our scheduling desk to set up a field visit.</p>
+                    
+                    <!-- Clean Corporate Contact Form Layout -->
+                    <form onsubmit="event.preventDefault(); alert('Message successfully logged. A dispatch coordinator will contact you shortly.');" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; text-align: left;">
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #475569; margin-bottom: 5px;">Contact Name</label>
+                            <input type="text" required placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.95rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #475569; margin-bottom: 5px;">Phone Number</label>
+                            <input type="tel" required placeholder="(704) 555-0199" style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.95rem;">
+                        </div>
+                        <div>
+                            <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #475569; margin-bottom: 5px;">Service Profile Requested</label>
+                            <select style="width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; font-size: 0.95rem;">
+                                <option>Automotive Field Service</option>
+                                <option>Residential Rekey / Hardware Install</option>
+                                <option>Commercial Lock Upgrade / Audit</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; max-width: 100%; background: #0f172a; margin-top: 10px;">Submit Schedule Request</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Footer Block -->
+    <footer class="footer-block">
+        <div class="footer-container">
+            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
+            <p class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with regional trade regulations.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
