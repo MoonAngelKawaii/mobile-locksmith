@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locksmith Solutions | Mobile Locksmith Lock & Key LLC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Corporate Global Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">MOBILE LOCKSMITH</span>
+                <span class="logo-subtext">LOCK & KEY LLC</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-item">Overview</a>
+                <a href="services.html" class="nav-item active">Solutions</a>
+                <a href="about.html" class="nav-item">Coverage</a>
+                <a href="contact.html" class="nav-item">Support</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header Sub-Hero -->
+    <header class="hero-block" style="padding: 50px 24px; background: #f8fafc;">
+        <div class="hero-container">
+            <div class="hero-main-text">
+                <h1>Mobile Locksmith Solutions</h1>
+                <p>Comprehensive field locksmith applications. Our mobile service vehicles are fully stocked with high-grade lock hardware and precision diagnostics tools to handle any job on-site.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Deep-Dive Service Matrix Grid -->
+    <section class="value-matrix" style="padding-top: 20px;">
+        <div class="matrix-container" style="grid-template-columns: 1fr;">
+            
+            <!-- Automotive Suite -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🚗 Automotive Lock & Key Fleet</h2>
+                <p style="margin-bottom: 15px;">Advanced roadside vehicle entry and ignition hardware servicing. Our mobile field units use specialized diagnostics tools to ensure quick, damage-free resolution for all vehicle profiles.</p>
+                <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                    <li>Emergency vehicle cabin lockout assistance</li>
+                    <li>Roadside trunk compartment entry recovery</li>
+                    <li>Broken key extraction from door cylinders and ignitions</li>
+                    <li>High-security vehicle entry protocols</li>
+                </ul>
+            </div>
+
+            <!-- Residential Suite -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🏠 Residential Property Security</h2>
+                <p style="margin-bottom: 15px;">Complete interior and exterior asset protection. From immediate home lockouts to updating hardware on a newly acquired property, we scale solutions to match your building hardware setup.</p>
+                <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                    <li>Emergency residential front door lockouts</li>
+                    <li>Complete household structural lock rekeying</li>
+                    <li>Heavy-duty deadbolt installation and alignment adjustments</li>
+                    <li>High-security lock upgrades and keypad smart lock integration</li>
+                    <li>Patio, sliding door, and secondary entryway lock servicing</li>
+                </ul>
+            </div>
+
+            <!-- Commercial Suite -->
+            <div class="matrix-card">
+                <div class="matrix-accent" style="background: #2563eb;"></div>
+                <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🏢 Commercial Facility Operations</h2>
+                <p style="margin-bottom: 15px;">Industrial-grade security solutions designed to protect local businesses, storefronts, office layouts, and asset spaces.</p>
+                <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
+                    <li>Commercial office and facility lockouts</li>
+                    <li>Storefront glass door mortise cylinder adjustments</li>
+                    <li>Panic bar and emergency exit push-bar servicing</li>
+                    <li>Master key blueprinting for commercial properties</li>
+                    <li>File cabinet, storage locker, and interior asset lock resets</li>
+                </ul>
+            </div>
+
+            <!-- On-Site Bidding Disclaimer Card -->
+            <div class="matrix-card" style="background: #f1f5f9; text-align: center; border-style: dashed;">
+                <h3 style="color: #0f172a; margin-bottom: 10px;">📋 Precision On-Site Hardware Assessment</h3>
+                <p style="max-width: 700px; margin: 0 auto; color: #475569;">To protect our clients and maintain strict technical accuracy, all binding quotes are calculated physically on-site. The field technician evaluates lock condition, security type, and complexity before initializing any entry or repair sequence.</p>
+                <button class="btn-primary" onclick="openModal()" style="margin-top: 20px;">Request Technician Callout</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Pop-Up Modal Component -->
+    <div id="quoteModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Request Service Dispatch</h2>
+                <button class="close-modal-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>For immediate field response and structural locking evaluations, please connect directly to our emergency dispatch desk:</p>
+                <a href="tel:7045550199" class="modal-phone-btn">📞 Connect to Live Operator Now</a>
+                <p class="modal-footer-note">Technicians verify physical identification on-site before initiating residential or vehicle entries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Global Footer Block -->
+    <footer class="footer-block">
+        <div class="footer-container">
+            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
+            <p class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with regional trade regulations.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Pop-Up Script Logic -->
+    <script>
+        function openModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            let modal = document.getElementById('quoteModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
