@@ -27,6 +27,7 @@
                 <a href="blog.html" class="nav-item">Insights</a>
             </div>
             <div class="nav-actions" id="navActions">
+                <span class="badge-verify">Licensed & Certified</span>
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
@@ -114,34 +115,32 @@
         </div>
     </div>
 
-    <!-- Global Footer -->
+    <!-- Global Footer Block -->
     <footer class="footer-block">
         <div class="footer-container">
-            <p>&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
-            <p style="font-size: 0.85rem; margin-top: 5px; color: #64748b;">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with state trade regulations.</p>
+            <div class="footer-legal">&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</div>
+            <div class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with state trade regulations.</div>
         </div>
     </footer>
 
-    <!-- Interactive Functionality Script -->
+    <!-- Interactive Menu Engine -->
     <script>
-        function openModal() {
-            document.getElementById('quoteModal').style.display = 'flex';
-        }
-        function closeModal() {
-            document.getElementById('quoteModal').style.display = 'none';
-        }
         function toggleMobileMenu() {
             var links = document.getElementById('navLinks');
             var actions = document.getElementById('navActions');
-            if (links.style.display === 'flex') {
-                links.style.display = 'none';
-                actions.style.display = 'none';
-            } else {
-                links.style.display = 'flex';
-                actions.style.display = 'flex';
-            }
+            links.classList.toggle('nav-open');
+            actions.classList.toggle('nav-open');
         }
-        // Close modal if clicked outside the content box
+
+        function openModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+        }
+
+        // Close modal if user clicks gray backdrop surface area
         window.onclick = function(event) {
             var modal = document.getElementById('quoteModal');
             if (event.target == modal) {
@@ -151,4 +150,5 @@
     </script>
 </body>
 </html>
+
 
