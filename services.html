@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Locksmith Solutions | Mobile Locksmith Lock & Key LLC</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stylized Header Image Layout Elements for Service Matrix Cards */
+        .card-image-wrapper {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            margin: -24px -24px 20px -24px;
+            width: calc(100% + 48px);
+            border-bottom: 1px solid var(--border);
+        }
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -50,6 +67,9 @@
             <!-- Automotive Suite -->
             <div class="matrix-card">
                 <div class="matrix-accent" style="background: #2563eb;"></div>
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Automotive key remote and vehicle safety diagnostics">
+                </div>
                 <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🚗 Automotive Lock & Key Fleet</h2>
                 <p style="margin-bottom: 15px;">Advanced roadside vehicle entry and ignition hardware servicing. Our mobile field units use specialized diagnostics tools to ensure quick, damage-free resolution for all vehicle profiles.</p>
                 <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
@@ -63,6 +83,9 @@
             <!-- Residential Suite -->
             <div class="matrix-card">
                 <div class="matrix-accent" style="background: #2563eb;"></div>
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Residential front door lock assembly protection">
+                </div>
                 <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🏠 Residential Property Security</h2>
                 <p style="margin-bottom: 15px;">Complete interior and exterior asset protection. From immediate home lockouts to updating hardware on a newly acquired property, we scale solutions to match your building hardware setup.</p>
                 <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
@@ -77,6 +100,9 @@
             <!-- Commercial Suite -->
             <div class="matrix-card">
                 <div class="matrix-accent" style="background: #2563eb;"></div>
+                <div class="card-image-wrapper">
+                    <img src="https://unsplash.com" alt="Commercial local facility and storefront glass entry hardware">
+                </div>
                 <h2 style="margin-bottom: 10px; font-size: 1.5rem;">🏢 Commercial Facility Operations</h2>
                 <p style="margin-bottom: 15px;">Industrial-grade security solutions designed to protect local businesses, storefronts, office layouts, and asset spaces.</p>
                 <ul style="margin-left: 20px; color: #475569; font-size: 0.95rem; line-height: 1.8;">
@@ -89,7 +115,7 @@
             </div>
 
             <!-- On-Site Bidding Disclaimer Card -->
-            <div class="matrix-card" style="background: #f1f5f9; text-align: center; border-style: dashed;">
+            <div class="matrix-card" style="background: #f1f5f9; text-align: center; border-style: dashed; display: flex; flex-direction: column; justify-content: center; align-items: center;">
                 <h3 style="color: #0f172a; margin-bottom: 10px;">📋 Precision On-Site Hardware Assessment</h3>
                 <p style="max-width: 700px; margin: 0 auto; color: #475569;">To protect our clients and maintain strict technical accuracy, all binding quotes are calculated physically on-site. The field technician evaluates lock condition, security type, and complexity before initializing any entry or repair sequence.</p>
                 <button class="btn-primary" onclick="openModal()" style="margin-top: 20px;">Request Technician Callout</button>
