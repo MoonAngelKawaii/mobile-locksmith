@@ -37,16 +37,23 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     padding: 4px;
 }
 
-/* Hero Interface */
-.hero-block { background: #ffffff; border-bottom: 1px solid var(--border); padding: 60px 24px; text-align: center; }
+/* Hero Interface Layout Engine - Set with your custom wooden tools photo */
+.hero-block { 
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
+                url('guarantee.jpg') no-repeat center center; 
+    background-size: cover; 
+    padding: 60px 24px; 
+    text-align: center; 
+}
 .hero-container { max-width: 800px; margin: 0 auto; }
-.hero-main-text h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; color: var(--text-primary); margin-bottom: 16px; line-height: 1.15; }
-.hero-main-text p { font-size: 1.05rem; color: var(--text-secondary); max-width: 640px; margin: 0 auto 32px auto; line-height: 1.5; }
+.hero-main-text h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; color: #ffffff; margin-bottom: 16px; line-height: 1.15; }
+.hero-main-text p { font-size: 1.05rem; color: #cbd5e1; max-width: 640px; margin: 0 auto 32px auto; line-height: 1.5; }
 .hero-btn-row { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
 
 .btn-primary { background: var(--accent); color: #fff; border: none; padding: 16px 32px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; max-width: 320px; transition: background 0.15s ease; }
 .btn-primary:hover { background: #1d4ed8; }
-.btn-secondary { background: transparent; color: var(--text-primary); border: 1px solid var(--border); text-decoration: none; text-align: center; padding: 16px 32px; font-size: 1rem; font-weight: 600; border-radius: 8px; width: 100%; max-width: 320px; }
+.btn-secondary { background: transparent; color: #ffffff; border: 1px solid #475569; text-decoration: none; text-align: center; padding: 16px 32px; font-size: 1rem; font-weight: 600; border-radius: 8px; width: 100%; max-width: 320px; transition: all 0.2s; }
+.btn-secondary:hover { border-color: #94a3b8; background: rgba(255, 255, 255, 0.05); }
 
 /* Dashboard Service Matrix Cards */
 .value-matrix { padding: 40px 24px; }
@@ -90,7 +97,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-links {
-        display: none; /* Keeps menu options hidden on phones until clicked */
+        display: none;
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -110,7 +117,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-actions {
-        display: none; /* Keeps action badges hidden on phones until clicked */
+        display: none;
         flex-direction: column;
         width: 100%;
         align-items: stretch;
@@ -118,7 +125,6 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         margin-top: 12px;
     }
 
-    /* Reveals the layout links immediately when the hamburger button is clicked */
     .nav-links.nav-open,
     .nav-actions.nav-open {
         display: flex !important;
@@ -142,11 +148,11 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
    ========================================================================== */
 @media (min-width: 768px) {
     .mobile-menu-toggle {
-        display: none !important; /* Hides the hamburger menu bar completely on PC screens */
+        display: none !important;
     }
 
     .nav-links {
-        display: flex !important; /* Enforces that standard menus always show flat on PC screens */
+        display: flex !important;
         flex-direction: row !important;
     }
 
@@ -162,7 +168,8 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         align-items: stretch !important;
     }
     .hero-block { padding: 120px 24px; }
-    .hero-main-text h1 { font-size: 3.5rem; }
+    .hero-main-text h1 { font-size: 3.5rem; color: #ffffff; }
+    .hero-main-text p { font-size: 1.25rem; }
     .hero-btn-row { flex-direction: row; }
     .btn-primary, .btn-secondary { width: auto; }
     .value-matrix { padding: 60px 24px; }
