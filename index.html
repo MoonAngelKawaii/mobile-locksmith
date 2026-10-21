@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Locksmith Lock & Key LLC</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contextual Image Adjustments for Home Layout */
+        .hero-block {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
+                        url('https://unsplash.com') no-repeat center center;
+            background-size: cover;
+        }
+        .visual-banner-card {
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .visual-banner-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -55,6 +77,11 @@
             <p style="color: #475569; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
                 We stand behind our field mechanical installations. Every deadbolt swap, transponder cylinder calibration, and vehicle door bypass sequence is completed to the highest safety guidelines. If a hardware part fails due to normal use within our covered operational terms, we deploy a field unit directly back to your address to make it right.
             </p>
+            
+            <!-- Added Professional Tool Assembly Image Link -->
+            <div class="visual-banner-card">
+                <img src="https://unsplash.com" alt="Professional locksmith tools and keys placement">
+            </div>
         </div>
     </section>
 
@@ -126,27 +153,3 @@
     <!-- Interactive JavaScript Engine -->
     <script>
         function toggleMobileMenu() {
-            var links = document.getElementById('navLinks');
-            var actions = document.getElementById('navActions');
-            links.classList.toggle('nav-open');
-            actions.classList.toggle('nav-open');
-        }
-
-        function openModal() {
-            document.getElementById('quoteModal').style.display = 'flex';
-        }
-
-        function closeModal() {
-            document.getElementById('quoteModal').style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            var modal = document.getElementById('quoteModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-    </script>
-</body>
-</html>
-
