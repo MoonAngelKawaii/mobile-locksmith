@@ -83,11 +83,11 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .mobile-menu-toggle {
-        display: block; /* Shows mobile interactive hamburger menu layout */
+        display: block !important; /* Shows mobile interactive hamburger menu layout only on phones */
     }
 
     .nav-links {
-        display: none; /* Controlled dynamically via toggleMobileMenu() JavaScript trigger */
+        display: none; /* Controlled dynamically via toggleMobileMenu() class trigger */
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -107,12 +107,18 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-actions {
-        display: none; /* Controlled dynamically via toggleMobileMenu() JavaScript trigger */
+        display: none; /* Controlled dynamically via toggleMobileMenu() class trigger */
         flex-direction: column;
         width: 100%;
         align-items: stretch;
         gap: 12px;
         margin-top: 12px;
+    }
+
+    /* Displays the elements instantly when menu is clicked on mobile toggles */
+    .nav-links.nav-open,
+    .nav-actions.nav-open {
+        display: flex !important;
     }
 
     .badge-verify {
@@ -132,6 +138,20 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
    COMPUTER & TABLET LARGE SCREEN BREAKPOINTS (Screens 768px and wider)
    ========================================================================== */
 @media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none !important; /* Forces the hamburger bars to hide completely on PC screens */
+    }
+
+    .nav-links {
+        display: flex !important; /* Enforces flat horizontal array layout rules for desktop views */
+        flex-direction: row !important;
+    }
+
+    .nav-actions {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+
     .matrix-container { grid-template-columns: repeat(3, 1fr); }
     .hero-block { padding: 120px 24px; }
     .hero-main-text h1 { font-size: 3.5rem; }
@@ -145,3 +165,4 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     from { transform: translateY(15px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
