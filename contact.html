@@ -15,14 +15,19 @@
                 <span class="logo-text">MOBILE LOCKSMITH</span>
                 <span class="logo-subtext">LOCK & KEY LLC</span>
             </div>
-            <div class="nav-links">
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-item">Overview</a>
                 <a href="services.html" class="nav-item">Solutions</a>
                 <a href="about.html" class="nav-item">Coverage</a>
                 <a href="contact.html" class="nav-item active">Support</a>
                 <a href="blog.html" class="nav-item">Insights</a>
             </div>
-            <div class="nav-actions">
+            <div class="nav-actions" id="navActions">
+                <span class="badge-verify">Licensed & Certified</span>
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
@@ -88,6 +93,14 @@
         </div>
     </footer>
 
+    <!-- Interactive Menu Engine -->
+    <script>
+        function toggleMobileMenu() {
+            var links = document.getElementById('navLinks');
+            var actions = document.getElementById('navActions');
+            links.classList.toggle('nav-open');
+            actions.classList.toggle('nav-open');
+        }
+    </script>
 </body>
 </html>
-
