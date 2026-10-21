@@ -82,12 +82,15 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         flex-wrap: wrap;
     }
 
+    /* FORCES THE HAMBURGER TO SHOW UP ON MOBILE DEVICES FOR ALL PAGES */
     .mobile-menu-toggle {
-        display: block !important; /* Shows mobile interactive hamburger menu layout only on phones */
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .nav-links {
-        display: none; /* Controlled dynamically via toggleMobileMenu() class trigger */
+        display: none; /* Keeps menu options hidden on phones until clicked */
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -107,7 +110,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-actions {
-        display: none; /* Controlled dynamically via toggleMobileMenu() class trigger */
+        display: none; /* Keeps action badges hidden on phones until clicked */
         flex-direction: column;
         width: 100%;
         align-items: stretch;
@@ -115,7 +118,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         margin-top: 12px;
     }
 
-    /* Displays the elements instantly when menu is clicked on mobile toggles */
+    /* Reveals the layout links immediately when the hamburger button is clicked */
     .nav-links.nav-open,
     .nav-actions.nav-open {
         display: flex !important;
@@ -139,11 +142,11 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
    ========================================================================== */
 @media (min-width: 768px) {
     .mobile-menu-toggle {
-        display: none !important; /* Forces the hamburger bars to hide completely on PC screens */
+        display: none !important; /* Hides the hamburger menu bar completely on PC screens */
     }
 
     .nav-links {
-        display: flex !important; /* Enforces flat horizontal array layout rules for desktop views */
+        display: flex !important; /* Enforces that standard menus always show flat on PC screens */
         flex-direction: row !important;
     }
 
@@ -165,4 +168,3 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     from { transform: translateY(15px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-
