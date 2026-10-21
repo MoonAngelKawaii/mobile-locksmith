@@ -51,10 +51,10 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
 /* Dashboard Service Matrix Cards */
 .value-matrix { padding: 40px 24px; }
 .matrix-container { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 24px; }
-.matrix-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; position: relative; overflow: hidden; }
+.matrix-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
 .matrix-accent { position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--border); }
 .matrix-card:hover .matrix-accent { background: var(--accent); }
-.matrix-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+.matrix-card h2, .matrix-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: var(--text-primary); }
 .matrix-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.5; }
 
 /* Premium Pop-Up Modal Component */
@@ -155,7 +155,12 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         flex-direction: row !important;
     }
 
-    .matrix-container { grid-template-columns: repeat(3, 1fr); }
+    .matrix-container { 
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; 
+        gap: 24px !important;
+        align-items: stretch !important;
+    }
     .hero-block { padding: 120px 24px; }
     .hero-main-text h1 { font-size: 3.5rem; }
     .hero-btn-row { flex-direction: row; }
