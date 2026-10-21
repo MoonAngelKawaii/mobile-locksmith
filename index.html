@@ -15,14 +15,18 @@
                 <span class="logo-text">MOBILE LOCKSMITH</span>
                 <span class="logo-subtext">LOCK & KEY LLC</span>
             </div>
-            <div class="nav-links">
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-item active">Overview</a>
                 <a href="services.html" class="nav-item">Solutions</a>
                 <a href="about.html" class="nav-item">Coverage</a>
                 <a href="contact.html" class="nav-item">Support</a>
                 <a href="blog.html" class="nav-item">Insights</a>
             </div>
-            <div class="nav-actions">
+            <div class="nav-actions" id="navActions">
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
@@ -44,7 +48,7 @@
 
     <!-- Corporate Guarantee Pillar Interface -->
     <section class="services-section" style="background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 60px 24px;">
-        <div class="section-container" style="max-width: 800px; text-align: center;">
+        <div class="section-container" style="max-width: 800px; text-align: center; margin: 0 auto;">
             <div style="font-size: 3rem; margin-bottom: 15px;">🛡️</div>
             <h2 class="section-title">The Field Service Guarantee</h2>
             <p style="color: #475569; font-size: 1.1rem; line-height: 1.6; margin-bottom: 20px;">
@@ -113,18 +117,38 @@
     <!-- Global Footer -->
     <footer class="footer-block">
         <div class="footer-container">
-            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
-            <p class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with state trade regulations.</p>
+            <p>&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
+            <p style="font-size: 0.85rem; margin-top: 5px; color: #64748b;">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with state trade regulations.</p>
         </div>
     </footer>
 
+    <!-- Interactive Functionality Script -->
     <script>
-        function openModal() { document.getElementById('quoteModal').style.display = 'flex'; }
-        function closeModal() { document.getElementById('quoteModal').style.display = 'none'; }
+        function openModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+        }
+        function toggleMobileMenu() {
+            var links = document.getElementById('navLinks');
+            var actions = document.getElementById('navActions');
+            if (links.style.display === 'flex') {
+                links.style.display = 'none';
+                actions.style.display = 'none';
+            } else {
+                links.style.display = 'flex';
+                actions.style.display = 'flex';
+            }
+        }
+        // Close modal if clicked outside the content box
         window.onclick = function(event) {
-            let modal = document.getElementById('quoteModal');
-            if (event.target == modal) { modal.style.display = 'none'; }
+            var modal = document.getElementById('quoteModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
         }
     </script>
 </body>
 </html>
+
