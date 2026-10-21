@@ -8,7 +8,7 @@
     <style>
         .hero-block {
             background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
-                        url('https://unsplash.com') no-repeat center center;
+                        url('https://pexels.com') no-repeat center center;
             background-size: cover;
         }
         .visual-banner-card {
@@ -70,29 +70,26 @@
                 We stand behind our field mechanical installations. Every deadbolt swap and vehicle door bypass sequence is completed to the highest safety guidelines.
             </p>
             <div class="visual-banner-card">
-                <img src="https://unsplash.com" alt="Professional locksmith tools and keys placement">
+                <img src="https://pexels.com" alt="Professional locksmith tools and keys placement">
             </div>
         </div>
     </section>
 
-    <section class="services-section" style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 60px 24px;">
-        <div class="section-container" style="max-width: 850px; margin: 0 auto;">
-            <h2 class="section-title" style="font-size: 2.2rem; font-weight: 800; color: #0f172a; text-align: center;">Frequently Asked Operations</h2>
-            <p class="section-subtitle" style="text-align: center; color: #64748b; margin-bottom: 40px;">Clear answers regarding our mobile field dispatches and lock engineering protocols.</p>
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border-left: 4px solid #2563eb;">
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Why are binding quotes only provided on-site?</h3>
-                    <p style="color: #475569; font-size: 0.98rem; line-height: 1.6;">Lock hardware specifications vary wildly depending on build age and structural door wear. A specialist must physically audit the mechanism on location.</p>
-                </div>
-                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border-left: 4px solid #2563eb;">
-                    <h3 style="font-size: 1.15rem; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Do you verify property ownership before unlocking doors?</h3>
-                    <p style="color: #475569; font-size: 0.98rem; line-height: 1.6;">Yes. Technicians are legally required to verify valid government identification and documents matching the registration or address prior to entry.</p>
-                </div>
+    <div id="quoteModal" class="modal-overlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); justify-content:center; align-items:center;">
+        <div class="modal-box" style="background:#fff; padding:30px; border-radius:8px; max-width:500px; width:90%;">
+            <div class="modal-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
+                <h2>Request Service Dispatch</h2>
+                <button class="close-modal-btn" onclick="closeModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>For immediate field response and structural locking evaluations, please connect directly to our emergency dispatch desk:</p>
+                <a href="tel:7045550199" class="modal-phone-btn" style="display:block; text-align:center; background:#2563eb; color:#fff; padding:12px; border-radius:6px; text-decoration:none; margin:15px 0;">📞 Connect to Live Operator Now</a>
+                <p class="modal-footer-note" style="font-size:0.85rem; color:#64748b;">Technicians verify physical identification on-site before initiating residential or vehicle entries.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="footer-block">
+    <footer class="footer-block" style="background:#0f172a; color:#94a3b8; padding:40px 24px; text-align:center;">
         <div class="footer-container">
             <div class="footer-legal">&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</div>
         </div>
@@ -107,6 +104,10 @@
         }
         function openModal() { document.getElementById('quoteModal').style.display = 'flex'; }
         function closeModal() { document.getElementById('quoteModal').style.display = 'none'; }
+        window.onclick = function(event) {
+            var modal = document.getElementById('quoteModal');
+            if (event.target == modal) { modal.style.display = 'none'; }
+        }
     </script>
 </body>
 </html>
