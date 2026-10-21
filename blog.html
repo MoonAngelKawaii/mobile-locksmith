@@ -15,14 +15,19 @@
                 <span class="logo-text">MOBILE LOCKSMITH</span>
                 <span class="logo-subtext">LOCK & KEY LLC</span>
             </div>
-            <div class="nav-links">
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="nav-item">Overview</a>
                 <a href="services.html" class="nav-item">Solutions</a>
                 <a href="about.html" class="nav-item">Coverage</a>
                 <a href="contact.html" class="nav-item">Support</a>
                 <a href="blog.html" class="nav-item active">Insights</a>
             </div>
-            <div class="nav-actions">
+            <div class="nav-actions" id="navActions">
+                <span class="badge-verify">Licensed & Certified</span>
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
@@ -39,13 +44,13 @@
     </header>
 
     <!-- Deep-Dive Informational Article Grid Layout -->
-    <section class="services-section">
-        <div class="section-container">
+    <section class="services-section" style="padding: 60px 24px; background: var(--bg-main);">
+        <div class="section-container" style="max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px;">
             
-            <div class="services-grid">
+            <div class="services-grid" style="display: flex; flex-direction: column; gap: 40px;">
                 
                 <!-- Advanced Article Card 1 -->
-                <div class="service-card" style="border-top: 5px solid #2563eb;">
+                <div class="service-card" style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 32px; border-top: 5px solid #2563eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
                     <div style="display: inline-block; font-size: 0.75rem; font-weight: 800; background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 20px; text-transform: uppercase;">Technical Report #2401 &bull; Residential Safety</div>
                     <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.2;">Understanding Lock Rekeying vs. Complete Hardware System Replacement</h2>
                     <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
@@ -58,7 +63,7 @@
                 </div>
 
                 <!-- Advanced Article Card 2 -->
-                <div class="service-card" style="border-top: 5px solid #2563eb;">
+                <div class="service-card" style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 32px; border-top: 5px solid #2563eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
                     <div style="display: inline-block; font-size: 0.75rem; font-weight: 800; background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 20px; text-transform: uppercase;">Technical Report #2402 &bull; Automotive Systems</div>
                     <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.2;">How Laser-Cut High-Security Keys Interface with Transponder Boards</h2>
                     <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
@@ -71,31 +76,27 @@
                 </div>
 
                 <!-- Advanced Article Card 3 -->
-                <div class="service-card" style="border-top: 5px solid #2563eb;">
+                <div class="service-card" style="background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 32px; border-top: 5px solid #2563eb; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
                     <div style="display: inline-block; font-size: 0.75rem; font-weight: 800; background: #eff6ff; color: #2563eb; padding: 6px 12px; border-radius: 4px; letter-spacing: 1px; margin-bottom: 20px; text-transform: uppercase;">Technical Report #2403 &bull; Commercial Facilities</div>
                     <h2 style="font-size: 1.8rem; font-weight: 800; color: #0f172a; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.2;">Structural Vulnerabilities & Operational Maintenance of Storefront Mortise Locking Frameworks</h2>
                     <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
                         Commercial glass storefront entryways rely heavily on heavy-duty aluminum stiles housing specialized mortise locking bodies. These security mechanisms do not slide over the face of the door; instead, they are threaded directly inside a deep, structural pocket carved into the door edge. The cylinder features high-tensile threaded exterior sidewalls locked securely in position using specialized alignment set-screws located behind the faceplate.
                     </p>
                     <p style="color: #475569; font-size: 1.05rem; line-height: 1.7; margin-bottom: 24px;">
-                        Because commercial doors experience heavy, high-volume daily use, they are prone to distinct structural alignment failures. Over time, heavy door hinges begin to sag, shifting the alignment path between the swinging latch bolt or dead-latch deadbolt and the receiving frame strike opening. When components misalign, operators force the key cylinder harder, which strips the interior drive cams or shears the lock housing threads clean off. Routine field diagnostic checks by a professional mobile technician keep screws tight, lubricate moving internal gears, and center latch throw lengths to prevent emergency lock failure lockouts during critical operational hours.
+                        Because commercial doors experience heavy, high-volume daily use, they are prone to distinct structural alignment failures. Over time, heavy door hinges begin to sag, shifting the alignment path between the swinging latch bolt or dead-latch deadbolt and the receiving frame strike opening. When components misalign, operating friction warps the internal components. Regular engineering field updates and strike plate re-alignments are critical to prevent total entry structural hardware lockouts.
                     </p>
-                    <div style="border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 0.85rem; font-weight: 700; color: #64748b;">Keywords Covered: Mortise Cam Alignment, stile Lock Housings, Commercial Door Adjustments</div>
+                    <div style="border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 0.85rem; font-weight: 700; color: #64748b;">Keywords Covered: Mortise Hardware Sets, stile Alignments, Architectural Access Maintenance</div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <!-- Global Footer Component -->
+    <!-- Global Footer Block -->
     <footer class="footer-block">
         <div class="footer-container">
-            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
-            <p class="footer-sub">All active marketing channels, mobile service assets, and technical field infrastructure comply fully with local state trade regulations.</p>
+            <div class="footer-legal">&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</div>
+            <div class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with state trade regulations.</div>
         </div>
     </footer>
 
-</body>
-</html>
-
-    <!-- On-Site Dispatch Section Wrapper -->
