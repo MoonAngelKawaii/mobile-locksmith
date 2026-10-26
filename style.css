@@ -23,7 +23,10 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
 .nav-item:hover, .nav-item.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 .nav-actions { display: flex; align-items: center; gap: 16px; }
-.badge-verify { font-size: 0.7rem; font-weight: 700; background: #f1f5f9; color: var(--text-secondary); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border); }
+
+/* Permanently hides the Licensed & Certified badge across the entire platform */
+.badge-verify { display: none !important; }
+
 .btn-nav-call { background: var(--text-primary); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; }
 
 /* Mobile Menu Toggle Button Styling */
@@ -37,7 +40,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     padding: 4px;
 }
 
-/* Hero Interface Layout Engine - Set with your custom wooden tools photo */
+/* Hero Interface - Fixed template background rule to ensure dark gray contrast */
 .hero-block { 
     background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
                 url('guarantee.jpg') no-repeat center center; 
@@ -49,6 +52,18 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
 .hero-main-text h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -1px; color: #ffffff; margin-bottom: 16px; line-height: 1.15; }
 .hero-main-text p { font-size: 1.05rem; color: #cbd5e1; max-width: 640px; margin: 0 auto 32px auto; line-height: 1.5; }
 .hero-btn-row { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
+
+/* Sub-page Header Override to ensure it uses the custom theme gray layout */
+header.hero-block[style*="background: #f8fafc"],
+header.hero-block[style*="background:#f8fafc"],
+header.hero-block {
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
+                url('guarantee.jpg') no-repeat center center !important;
+    background-size: cover !important;
+    padding: 80px 24px !important;
+}
+header.hero-block h1 { color: #ffffff !important; }
+header.hero-block p { color: #cbd5e1 !important; }
 
 .btn-primary { background: var(--accent); color: #fff; border: none; padding: 16px 32px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; width: 100%; max-width: 320px; transition: background 0.15s ease; }
 .btn-primary:hover { background: #1d4ed8; }
@@ -89,7 +104,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         flex-wrap: wrap;
     }
 
-    /* FORCES THE HAMBURGER TO SHOW UP ON MOBILE DEVICES FOR ALL PAGES */
+    /* FORCES THE HAMBURGER TO SHOW UP AND RESPOND ON MOBILE DEVICES FOR ALL PAGES */
     .mobile-menu-toggle {
         display: block !important;
         visibility: visible !important;
@@ -97,7 +112,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-links {
-        display: none;
+        display: none; /* Keeps menu options hidden on phones until clicked */
         flex-direction: column;
         width: 100%;
         gap: 0;
@@ -117,7 +132,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     }
 
     .nav-actions {
-        display: none;
+        display: none; /* Keeps action components hidden on phones until clicked */
         flex-direction: column;
         width: 100%;
         align-items: stretch;
@@ -125,14 +140,10 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
         margin-top: 12px;
     }
 
+    /* Reveals the layout links instantly when the hamburger button is clicked */
     .nav-links.nav-open,
     .nav-actions.nav-open {
         display: flex !important;
-    }
-
-    .badge-verify {
-        text-align: center;
-        padding: 8px;
     }
 
     .btn-nav-call {
@@ -148,11 +159,11 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
    ========================================================================== */
 @media (min-width: 768px) {
     .mobile-menu-toggle {
-        display: none !important;
+        display: none !important; /* Hides the hamburger menu bar completely on PC screens */
     }
 
     .nav-links {
-        display: flex !important;
+        display: flex !important; /* Enforces that standard menus always show flat on PC screens */
         flex-direction: row !important;
     }
 
