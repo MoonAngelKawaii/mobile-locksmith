@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support | Mobile Locksmith Lock & Key LLC</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
     <style>
-        /* Contextual Image Wrapper for Contact Elements */
         .card-image-wrapper {
             width: 100%;
             height: 180px;
@@ -21,7 +20,6 @@
             object-fit: cover;
             display: block;
         }
-        /* Custom Button Override style for layout symmetry */
         .main-cta-btn {
             background: #2563eb;
             color: #ffffff;
@@ -36,33 +34,17 @@
             width: 100%;
             max-width: 320px;
         }
-        .main-cta-btn:hover {
-            background: #1d4ed8;
-        }
-        /* Grid override alignment engine */
-        .services-section {
-            padding: 40px 24px;
-        }
-        .section-container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 24px;
-        }
+        .main-cta-btn:hover { background: #1d4ed8; }
+        .services-section { padding: 40px 24px; }
+        .section-container { max-width: 1280px; margin: 0 auto; }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
         @media (min-width: 768px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                align-items: start;
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); align-items: start; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Corporate Global Navigation Header -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -70,7 +52,6 @@
                 <span class="logo-subtext">LOCK & KEY LLC</span>
             </div>
             
-            <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             
             <div class="nav-links" id="navLinks">
@@ -81,13 +62,11 @@
                 <a href="blog.html" class="nav-item">Insights</a>
             </div>
             <div class="nav-actions" id="navActions">
-                <span class="badge-verify">Licensed & Certified</span>
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header Sub-Hero -->
     <header class="hero-block">
         <div class="hero-container">
             <div class="hero-main-text">
@@ -97,12 +76,10 @@
         </div>
     </header>
 
-    <!-- Support Split Layout -->
     <section class="services-section">
         <div class="section-container">
             <div class="services-grid">
                 
-                <!-- Emergency Block -->
                 <div class="matrix-card" style="border-top: 5px solid #2563eb;">
                     <div class="card-image-wrapper">
                         <img src="https://pexels.com" alt="Emergency communications dispatch desk coordinator line">
@@ -114,7 +91,6 @@
                     </div>
                 </div>
 
-                <!-- Form Scheduling Block -->
                 <div class="matrix-card" style="border-top: 5px solid #2563eb;">
                     <div style="font-size: 1.5rem; margin-bottom: 10px;">✉️ Request an On-Site Evaluation</div>
                     <p style="margin-bottom: 20px;">Planning a future lock change, building rekey, or smart hardware upgrade? Send a message to our scheduling desk to set up a field visit.</p>
@@ -144,15 +120,12 @@
         </div>
     </section>
 
-    <!-- Global Footer Block -->
     <footer class="footer-block">
         <div class="footer-container">
-            <p class="footer-legal">Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
-            <p class="footer-sub">All active marketing channels, service vehicles, and on-site physical business assets comply strictly with regional trade regulations.</p>
+            <p class="footer-legal">&copy; 2026 Mobile Locksmith Lock & Key LLC &bull; Field Service Operations</p>
         </div>
     </footer>
 
-    <!-- Interactive Menu Engine -->
     <script>
         function toggleMobileMenu() {
             var links = document.getElementById('navLinks');
