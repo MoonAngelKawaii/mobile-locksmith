@@ -4,29 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Locksmith Lock & Key LLC</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Inserts the working direct Pexels image link safely behind your text banner */
-        .hero-block {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
-                        url('https://pexels.com') no-repeat center center;
-            background-size: cover;
-        }
-        .visual-banner-card {
-            max-width: 800px;
-            margin: 30px auto 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
-        }
-        .visual-banner-card img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-        }
-    </style>
+    <!-- Force phone browsers to immediately download your newest stylesheet changes -->
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -49,7 +28,6 @@
                 <a href="blog.html" class="nav-item">Insights</a>
             </div>
             <div class="nav-actions" id="navActions">
-                <span class="badge-verify">Licensed & Certified</span>
                 <a href="tel:7045550199" class="btn-nav-call">Call Dispatch</a>
             </div>
         </div>
@@ -78,9 +56,9 @@
                 We stand behind our field mechanical installations. Every deadbolt swap, transponder cylinder calibration, and vehicle door bypass sequence is completed to the highest safety guidelines. If a hardware part fails due to normal use within our covered operational terms, we deploy a field unit directly back to your address to make it right.
             </p>
             
-            <!-- Working Direct Pexels Image Link for Your Content Layout Section -->
+            <!-- Targets your uploaded custom tools image directly -->
             <div class="visual-banner-card">
-                <img src="https://pexels.com" alt="Professional locksmith tools and keys placement">
+                <img src="hero-bg.jpg" alt="Automotive key turning in vehicle ignition cylinder">
             </div>
         </div>
     </section>
@@ -153,3 +131,25 @@
     <script>
         function toggleMobileMenu() {
             var links = document.getElementById('navLinks');
+            var actions = document.getElementById('navActions');
+            links.classList.toggle('nav-open');
+            actions.classList.toggle('nav-open');
+        }
+
+        function openModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            var modal = document.getElementById('quoteModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
