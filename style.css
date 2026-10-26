@@ -23,10 +23,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
 .nav-item:hover, .nav-item.active { color: var(--accent); border-bottom-color: var(--accent); }
 
 .nav-actions { display: flex; align-items: center; gap: 16px; }
-
-/* Permanently hides the Licensed & Certified badge across the entire platform */
 .badge-verify { display: none !important; }
-
 .btn-nav-call { background: var(--text-primary); color: #fff; text-decoration: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; }
 
 /* Mobile Menu Toggle Button Styling */
@@ -40,12 +37,12 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
     padding: 4px;
 }
 
-/* Hero Interface - Fixed template background rule to ensure dark gray contrast */
+/* Hero Interface Layout Engine - Now securely pointing to your live ImgBB background asset link */
 .hero-block { 
-    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
-                url('guarantee.jpg') no-repeat center center; 
+    background: linear-gradient(rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.82)), 
+                url('https://ibb.co') no-repeat center center; 
     background-size: cover; 
-    padding: 60px 24px; 
+    padding: 100px 24px; 
     text-align: center; 
 }
 .hero-container { max-width: 800px; margin: 0 auto; }
@@ -53,15 +50,7 @@ body { background-color: var(--bg-main); color: var(--text-primary); -webkit-fon
 .hero-main-text p { font-size: 1.05rem; color: #cbd5e1; max-width: 640px; margin: 0 auto 32px auto; line-height: 1.5; }
 .hero-btn-row { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
 
-/* Sub-page Header Override to ensure it uses the custom theme gray layout */
-header.hero-block[style*="background: #f8fafc"],
-header.hero-block[style*="background:#f8fafc"],
-header.hero-block {
-    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.85)), 
-                url('guarantee.jpg') no-repeat center center !important;
-    background-size: cover !important;
-    padding: 80px 24px !important;
-}
+/* Sub-page Header Layout Configuration */
 header.hero-block h1 { color: #ffffff !important; }
 header.hero-block p { color: #cbd5e1 !important; }
 
@@ -100,84 +89,24 @@ header.hero-block p { color: #cbd5e1 !important; }
    MOBILE RESPONSIVE LAYOUT ENGINE BREAKPOINTS (Screens up to 767px wide)
    ========================================================================== */
 @media (max-width: 767px) {
-    .nav-container {
-        flex-wrap: wrap;
-    }
-
-    /* FORCES THE HAMBURGER TO SHOW UP AND RESPOND ON MOBILE DEVICES FOR ALL PAGES */
-    .mobile-menu-toggle {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-
-    .nav-links {
-        display: none; /* Keeps menu options hidden on phones until clicked */
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        margin-top: 16px;
-        padding-top: 8px;
-        border-top: 1px solid var(--border);
-    }
-
-    .nav-item {
-        padding: 12px 0;
-        width: 100%;
-        border-bottom: 1px solid #f1f5f9;
-    }
-    
-    .nav-item:hover, .nav-item.active {
-        border-bottom-color: transparent;
-    }
-
-    .nav-actions {
-        display: none; /* Keeps action components hidden on phones until clicked */
-        flex-direction: column;
-        width: 100%;
-        align-items: stretch;
-        gap: 12px;
-        margin-top: 12px;
-    }
-
-    /* Reveals the layout links instantly when the hamburger button is clicked */
-    .nav-links.nav-open,
-    .nav-actions.nav-open {
-        display: flex !important;
-    }
-
-    .btn-nav-call {
-        display: block;
-        text-align: center;
-        padding: 12px;
-        font-size: 0.95rem;
-    }
+    .nav-container { flex-wrap: wrap; }
+    .mobile-menu-toggle { display: block !important; visibility: visible !important; opacity: 1 !important; }
+    .nav-links { display: none; flex-direction: column; width: 100%; gap: 0; margin-top: 16px; padding-top: 8px; border-top: 1px solid var(--border); }
+    .nav-item { padding: 12px 0; width: 100%; border-bottom: 1px solid #f1f5f9; }
+    .nav-item:hover, .nav-item.active { border-bottom-color: transparent; }
+    .nav-actions { display: none; flex-direction: column; width: 100%; align-items: stretch; gap: 12px; margin-top: 12px; }
+    .nav-links.nav-open, .nav-actions.nav-open { display: flex !important; }
+    .btn-nav-call { display: block; text-align: center; padding: 12px; font-size: 0.95rem; }
 }
 
 /* ==========================================================================
    COMPUTER & TABLET LARGE SCREEN BREAKPOINTS (Screens 768px and wider)
    ========================================================================== */
 @media (min-width: 768px) {
-    .mobile-menu-toggle {
-        display: none !important; /* Hides the hamburger menu bar completely on PC screens */
-    }
-
-    .nav-links {
-        display: flex !important; /* Enforces that standard menus always show flat on PC screens */
-        flex-direction: row !important;
-    }
-
-    .nav-actions {
-        display: flex !important;
-        flex-direction: row !important;
-    }
-
-    .matrix-container { 
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important; 
-        gap: 24px !important;
-        align-items: stretch !important;
-    }
+    .mobile-menu-toggle { display: none !important; }
+    .nav-links { display: flex !important; flex-direction: row !important; }
+    .nav-actions { display: flex !important; flex-direction: row !important; }
+    .matrix-container { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 24px !important; align-items: stretch !important; }
     .hero-block { padding: 120px 24px; }
     .hero-main-text h1 { font-size: 3.5rem; color: #ffffff; }
     .hero-main-text p { font-size: 1.25rem; }
